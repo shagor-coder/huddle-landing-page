@@ -1,9 +1,9 @@
 .footer{
     background: $VeryDarkCyan;
-    padding: 6rem 0 1rem 0;
+    padding: 12rem 0 1rem 0;
     color: $White;
     position: relative;
-    margin-top: -10rem;
+    margin-top: -11rem;
 
     // ### Resetting Default Row
 
@@ -42,12 +42,20 @@
         &__des{
             @include font400;
             color: $White;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
 
             span{
-                height: 100%;
+                display: inline-block;
 
                 img{
                     width: 1.125rem;
+                }
+
+                &:not(:last-child){
+                    margin-right: 0.825rem;
                 }
             }
             a{

@@ -24,9 +24,10 @@
 @mixin font400 {
     font-family: 'Poppins',sans-serif;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.250rem;
     color: inherit;
     letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
     padding-bottom: 1.125rem;
 }
 
@@ -65,6 +66,7 @@
     @include btnSmall();
     background-color: $Pink;
     color: $White !important;
+    padding: 1rem 1.8rem !important;
     transition: all 0.3s ease-in-out;
 
     &:hover{
