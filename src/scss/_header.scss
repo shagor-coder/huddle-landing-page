@@ -1,0 +1,22 @@
+.main-header{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    background: $White;
+
+    .nav{
+        padding: 1rem 0;
+        @include disFlexb;
+
+
+        &__logo{
+
+            &__img{
+                width: 10rem;
+            }
+        }
+    }
+}

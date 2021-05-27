@@ -1,0 +1,127 @@
+@mixin font600 {
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: inherit;
+    letter-spacing: 0.0625rem;
+    padding-bottom: 1.125rem;
+
+    @media (max-width: 768px){
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+}
+
+@mixin font500 {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: inherit;
+    letter-spacing: 0.0625rem;
+    padding-bottom: 1.125rem;
+}
+
+@mixin font400 {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: inherit;
+    letter-spacing: 0.0625rem;
+    padding-bottom: 1.125rem;
+}
+
+@mixin disFlexC {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin disFlexb {
+    @include disFlexC();
+    justify-content: space-between;
+}
+
+@mixin btnSmall {
+    display: inline-block;
+    padding: 0.625rem 1.125rem;
+    color: $VeryDarkCyan;
+    background-color: $White;
+    font-size: 1.125rem;
+    font-weight: 400;
+    box-shadow: 0.125rem 0 0.625rem $VeryDarkCyan;
+    border-radius: 100vh;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background: $VeryDarkCyan;
+        color: $White !important;
+    }
+}
+
+@mixin btnBig {
+    @include btnSmall();
+    background-color: $Pink;
+    color: $White !important;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background: $White !important;
+        color: $VeryDarkCyan !important;
+    }
+}
+
+@mixin row {
+    @include disFlexC();
+    gap: 0.5rem;
+
+    @media(max-width: 768px){
+        &__c-s-100{
+            width: 100%;
+            flex-basis: 100%;
+            margin: auto;
+        }
+    }
+
+    @media(min-width: 768px){
+        &__c-m-50{
+            width: 49%;
+            flex-basis: 49%;
+            margin: 0;
+        }
+
+        &__c-m-70{
+            width: 68%;
+            flex-basis: 68%;
+            margin: 0;
+        }
+        &__c-m-100{
+            width: 100%;
+            flex-basis: 100%;
+            margin: 0;
+        }
+        &__c-l-25{
+            width: 24%;
+            flex-basis: 24%;
+            margin: 0;
+        }
+    }
+}
+
+
+@mixin bgControl {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+@mixin hoverImg {
+    transform: scale(1.10);
+}
+
+@mixin hoverling {
+    text-decoration: underline;
+}

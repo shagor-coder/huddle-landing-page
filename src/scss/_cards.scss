@@ -1,0 +1,48 @@
+.cards{
+    background: $White;
+
+    &__title{
+        @include font600;
+        color: $VeryDarkCyan;
+    }
+
+    &__des{
+        @include font400;
+        color: $VeryDarkCyan;
+    }
+
+
+    .row{
+        margin: 2rem auto !important;
+        &:not(:last-child){
+            padding: 1.5rem 1rem;
+            border-radius: 0.625rem;
+            box-shadow: 0.125rem 0 0.5rem $VeryDarkCyan;
+        }
+
+        &:nth-child(2){
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px){
+            text-align: center;
+        }
+    }
+
+    .rowsm{
+        padding: 1.5rem 1rem;
+        border-radius: 0.625rem;
+        margin: 1rem auto;
+        box-shadow: 0.125rem 0 0.5rem $VeryDarkCyan;
+        text-align: center;
+        background: $White;
+        z-index: 10;
+    }
+
+    &__imgBx{
+
+        &__img{
+            max-width: 100%;
+        }
+    }
+}
